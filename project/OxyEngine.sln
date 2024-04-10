@@ -5,6 +5,8 @@ VisualStudioVersion = 17.9.34701.34
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OxyEngine", "OxyEngine\OxyEngine.vcxproj", "{441A8456-5F75-4CE4-A49C-B0A1F0D2CA48}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestApp", "TestApp\TestApp.vcxproj", "{6D79D056-E0C5-4431-AB3A-F7C3975F3C2B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{441A8456-5F75-4CE4-A49C-B0A1F0D2CA48}.Release|x64.Build.0 = Release|x64
 		{441A8456-5F75-4CE4-A49C-B0A1F0D2CA48}.Release|x86.ActiveCfg = Release|Win32
 		{441A8456-5F75-4CE4-A49C-B0A1F0D2CA48}.Release|x86.Build.0 = Release|Win32
+		{6D79D056-E0C5-4431-AB3A-F7C3975F3C2B}.Debug|x64.ActiveCfg = Debug|x64
+		{6D79D056-E0C5-4431-AB3A-F7C3975F3C2B}.Debug|x64.Build.0 = Debug|x64
+		{6D79D056-E0C5-4431-AB3A-F7C3975F3C2B}.Debug|x86.ActiveCfg = Debug|Win32
+		{6D79D056-E0C5-4431-AB3A-F7C3975F3C2B}.Debug|x86.Build.0 = Debug|Win32
+		{6D79D056-E0C5-4431-AB3A-F7C3975F3C2B}.Release|x64.ActiveCfg = Release|x64
+		{6D79D056-E0C5-4431-AB3A-F7C3975F3C2B}.Release|x64.Build.0 = Release|x64
+		{6D79D056-E0C5-4431-AB3A-F7C3975F3C2B}.Release|x86.ActiveCfg = Release|Win32
+		{6D79D056-E0C5-4431-AB3A-F7C3975F3C2B}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

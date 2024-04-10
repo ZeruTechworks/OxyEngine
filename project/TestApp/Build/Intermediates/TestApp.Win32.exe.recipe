@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Users\cumputer\Source\Repos\OxyEngine\project\Build\OxyEngine.Win32.dll</FullPath>
+      <FullPath>C:\Users\cumputer\Source\Repos\OxyEngine\project\Build\TestApp.Win32.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />
