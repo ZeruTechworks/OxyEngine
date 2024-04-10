@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{441a8456-5f75-4ce4-a49c-b0a1f0d2ca48}</ProjectGuid>
+    <RootNamespace>OxyEngine</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>E:\Visual Studio Projects\OxyEngine\OxyEngine\source;E:\Visual Studio Projects\OxyEngine\OxyEngine\dependencies;$(IncludePath)</IncludePath>
+    <TargetName>$(ProjectName).$(Platform)</TargetName>
+    <OutDir>$(SolutionDir)Build</OutDir>
+    <IntDir>Build\Intermediates</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>E:\Visual Studio Projects\OxyEngine\OxyEngine\source;E:\Visual Studio Projects\OxyEngine\OxyEngine\dependencies;$(IncludePath)</IncludePath>
+    <TargetName>$(ProjectName).$(Platform)</TargetName>
+    <OutDir>$(SolutionDir)Build</OutDir>
+    <IntDir>Build\Intermediates</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="dependencies\eyestep\eyestep.cpp" />
+    <ClCompile Include="dependencies\eyestep\eyestep_utility.cpp" />
+    <ClCompile Include="dependencies\lua\lapi.c" />
+    <ClCompile Include="dependencies\lua\lauxlib.c" />
+    <ClCompile Include="dependencies\lua\lbaselib.c" />
+    <ClCompile Include="dependencies\lua\lbitlib.c" />
+    <ClCompile Include="dependencies\lua\lcode.c" />
+    <ClCompile Include="dependencies\lua\lcorolib.c" />
+    <ClCompile Include="dependencies\lua\lctype.c" />
+    <ClCompile Include="dependencies\lua\ldblib.c" />
+    <ClCompile Include="dependencies\lua\ldebug.c" />
+    <ClCompile Include="dependencies\lua\ldo.c" />
+    <ClCompile Include="dependencies\lua\ldump.c" />
+    <ClCompile Include="dependencies\lua\lfunc.c" />
+    <ClCompile Include="dependencies\lua\lgc.c" />
+    <ClCompile Include="dependencies\lua\linit.c" />
+    <ClCompile Include="dependencies\lua\liolib.c" />
+    <ClCompile Include="dependencies\lua\llex.c" />
+    <ClCompile Include="dependencies\lua\lmathlib.c" />
+    <ClCompile Include="dependencies\lua\lmem.c" />
+    <ClCompile Include="dependencies\lua\loadlib.c" />
+    <ClCompile Include="dependencies\lua\lobject.c" />
+    <ClCompile Include="dependencies\lua\lopcodes.c" />
+    <ClCompile Include="dependencies\lua\loslib.c" />
+    <ClCompile Include="dependencies\lua\lparser.c" />
+    <ClCompile Include="dependencies\lua\lstate.c" />
+    <ClCompile Include="dependencies\lua\lstring.c" />
+    <ClCompile Include="dependencies\lua\lstrlib.c" />
+    <ClCompile Include="dependencies\lua\ltable.c" />
+    <ClCompile Include="dependencies\lua\ltablib.c" />
+    <ClCompile Include="dependencies\lua\ltm.c" />
+    <ClCompile Include="dependencies\lua\lua.c" />
+    <ClCompile Include="dependencies\lua\luac.c" />
+    <ClCompile Include="dependencies\lua\lundump.c" />
+    <ClCompile Include="dependencies\lua\lvm.c" />
+    <ClCompile Include="dependencies\lua\lzio.c" />
+    <ClCompile Include="source\oxy\engine\engine.cpp" />
+    <ClCompile Include="source\oxy\environment\environment.cpp" />
+    <ClCompile Include="source\misc\console\console.cpp" />
+    <ClCompile Include="source\misc\entry\entry.cpp" />
+    <ClCompile Include="source\oxy\environment\oxyfunc\oxyfunc.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="dependencies\eyestep\eyestep.h" />
+    <ClInclude Include="dependencies\eyestep\eyestep_utility.h" />
+    <ClInclude Include="dependencies\lazy_import\lazy_import.hpp" />
+    <ClInclude Include="dependencies\lua\lapi.h" />
+    <ClInclude Include="dependencies\lua\lauxlib.h" />
+    <ClInclude Include="dependencies\lua\lcode.h" />
+    <ClInclude Include="dependencies\lua\lctype.h" />
+    <ClInclude Include="dependencies\lua\ldebug.h" />
+    <ClInclude Include="dependencies\lua\ldo.h" />
+    <ClInclude Include="dependencies\lua\lfunc.h" />
+    <ClInclude Include="dependencies\lua\lgc.h" />
+    <ClInclude Include="dependencies\lua\llex.h" />
+    <ClInclude Include="dependencies\lua\llimits.h" />
+    <ClInclude Include="dependencies\lua\lmem.h" />
+    <ClInclude Include="dependencies\lua\lobject.h" />
+    <ClInclude Include="dependencies\lua\lopcodes.h" />
+    <ClInclude Include="dependencies\lua\lparser.h" />
+    <ClInclude Include="dependencies\lua\lstate.h" />
+    <ClInclude Include="dependencies\lua\lstring.h" />
+    <ClInclude Include="dependencies\lua\ltable.h" />
+    <ClInclude Include="dependencies\lua\ltm.h" />
+    <ClInclude Include="dependencies\lua\lua.h" />
+    <ClInclude Include="dependencies\lua\lua.hpp" />
+    <ClInclude Include="dependencies\lua\luaconf.h" />
+    <ClInclude Include="dependencies\lua\lualib.h" />
+    <ClInclude Include="dependencies\lua\lundump.h" />
+    <ClInclude Include="dependencies\lua\lvm.h" />
+    <ClInclude Include="dependencies\lua\lzio.h" />
+    <ClInclude Include="dependencies\xor\xorstr.h" />
+    <ClInclude Include="source\oxy\engine\engine.h" />
+    <ClInclude Include="source\oxy\environment\environment.h" />
+    <ClInclude Include="source\misc\console\console.h" />
+    <ClInclude Include="source\misc\entry\entry.h" />
+    <ClInclude Include="source\oxy\environment\oxyfunc\oxyfunc.h" />
+    <ClInclude Include="source\oxy\oxy.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
