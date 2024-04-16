@@ -27,9 +27,6 @@
     <ClCompile Include="source\oxy\environment\oxyfunc\oxyfunc.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="source\misc\console\console.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="dependencies\lua\lapi.c">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -150,9 +147,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="source\oxy\environment\oxyfunc\oxyfunc.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="source\misc\console\console.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="source\oxy\oxy.h">

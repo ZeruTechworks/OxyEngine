@@ -2,20 +2,31 @@
 
 int main_thread()
 {
-    console->setup(XorStr("oxy scripting utility"));
-    
-    std::printf(XorStr("version: %s\n", version.c_str()));
-    std::printf(XorStr("oxy scripting engine - debug tool\n"));
+    HANDLE hPipe;
+    char buffer[1024];
+    DWORD dwRead;
 
-    while (true)
+    hPipe = CreateNamedPipe(TEXT("\\\\.\\pipe\\oxyengine"),
+        PIPE_ACCESS_DUPLEX,
+        PIPE_TYPE_BYTE | PIPE_READMODE_BYTE | PIPE_WAIT,
+        1,
+        16384,
+        16384,
+        NMPWAIT_USE_DEFAULT_WAIT,
+        NULL);
+    while (hPipe != INVALID_HANDLE_VALUE)
     {
-        std::string source;
-        std::getline(std::cin, source);
+        if (ConnectNamedPipe(hPipe, NULL) != FALSE)
+        {
+            while (ReadFile(hPipe, buffer, sizeof(buffer) - 1, &dwRead, NULL) != FALSE)
+            {
+                buffer[dwRead] = '\0';
+                std::string bytecode = engine->compiler(buffer);
+                engine->runner(bytecode);
+            }
+        }
 
-        std::string bytecode = engine->compiler(source);
-        engine->runner(bytecode);
-
-        std::this_thread::sleep_for(std::chrono::seconds(2));
+        DisconnectNamedPipe(hPipe);
     }
 
     return 0;
