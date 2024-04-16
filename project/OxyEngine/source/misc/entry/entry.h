@@ -6,7 +6,6 @@
 
 #include <xor/xorstr.h>
 
-#include <misc/console/console.h>
 #include <oxy/engine/engine.h>
 
 HMODULE current_hmodule = NULL;

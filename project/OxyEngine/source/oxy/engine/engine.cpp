@@ -1,4 +1,7 @@
 #include <oxy/engine/engine.h>
+#include "engine.h"
+
+lua_State* engine_state = luaL_newstate();
 
 static auto bytecode_writer(lua_State* state, const void* p, size_t size, void* ud)
 {
@@ -30,28 +33,24 @@ std::string t_engine::compiler(const std::string& source)
 
 void t_engine::runner(const std::string& bytecode)
 {
-	lua_State* state = luaL_newstate();
-
-	luaL_openlibs(state);
-	environment->setup(state);
-	oxy_environment->setup(state);
-
-	if (luaL_loadbuffer(state, bytecode.c_str(), bytecode.size(), nullptr) == LUA_OK)
+	if (luaL_loadbuffer(engine_state, bytecode.c_str(), bytecode.size(), nullptr) == LUA_OK)
 	{
-		if (lua_pcall(state, 0, LUA_MULTRET, 0) != LUA_OK)
+		if (lua_pcall(engine_state, 0, LUA_MULTRET, 0) != LUA_OK)
 		{
-			const char* Error = lua_tostring(state, -1);
-			lua_close(state);
-
+			const char* Error = lua_tostring(engine_state, -1);
 			throw std::runtime_error(Error);
 		}
 
-		lua_close(state);
 		return;
 	}
 
-	const char* Error = lua_tostring(state, -1);
-	lua_close(state);
-
+	const char* Error = lua_tostring(engine_state, -1);
 	throw std::runtime_error(Error);
+}
+
+void t_engine::setup()
+{
+	luaL_openlibs(engine_state);
+	environment->setup(engine_state);
+	oxy_environment->setup(engine_state);
 }

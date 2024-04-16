@@ -71,13 +71,13 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>E:\Visual Studio Projects\OxyEngine\OxyEngine\source;E:\Visual Studio Projects\OxyEngine\OxyEngine\dependencies;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\cumputer\source\repos\CodeineRoblox\OxyEngine\project\OxyEngine\source;C:\Users\cumputer\source\repos\CodeineRoblox\OxyEngine\project\OxyEngine\dependencies;$(IncludePath)</IncludePath>
     <TargetName>$(ProjectName).$(Platform)</TargetName>
     <OutDir>$(SolutionDir)Build</OutDir>
     <IntDir>Build\Intermediates</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>E:\Visual Studio Projects\OxyEngine\OxyEngine\source;E:\Visual Studio Projects\OxyEngine\OxyEngine\dependencies;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\cumputer\source\repos\CodeineRoblox\OxyEngine\project\OxyEngine\source;C:\Users\cumputer\source\repos\CodeineRoblox\OxyEngine\project\OxyEngine\dependencies;$(IncludePath)</IncludePath>
     <TargetName>$(ProjectName).$(Platform)</TargetName>
     <OutDir>$(SolutionDir)Build</OutDir>
     <IntDir>Build\Intermediates</IntDir>

@@ -5,6 +5,9 @@
 
 #include <lua/lua.hpp>
 
+#include <eyestep/eyestep.h>
+#include <eyestep/eyestep_utility.h>
+
 class t_oxy_environment
 {
 public:

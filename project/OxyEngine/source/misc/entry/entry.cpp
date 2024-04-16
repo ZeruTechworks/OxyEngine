@@ -6,6 +6,8 @@ int main_thread()
     char buffer[1024];
     DWORD dwRead;
 
+    engine->setup();
+
     hPipe = CreateNamedPipe(TEXT("\\\\.\\pipe\\oxyengine"),
         PIPE_ACCESS_DUPLEX,
         PIPE_TYPE_BYTE | PIPE_READMODE_BYTE | PIPE_WAIT,
@@ -14,6 +16,7 @@ int main_thread()
         16384,
         NMPWAIT_USE_DEFAULT_WAIT,
         NULL);
+    
     while (hPipe != INVALID_HANDLE_VALUE)
     {
         if (ConnectNamedPipe(hPipe, NULL) != FALSE)
@@ -21,8 +24,16 @@ int main_thread()
             while (ReadFile(hPipe, buffer, sizeof(buffer) - 1, &dwRead, NULL) != FALSE)
             {
                 buffer[dwRead] = '\0';
-                std::string bytecode = engine->compiler(buffer);
-                engine->runner(bytecode);
+                
+                try
+                {
+                    std::string bytecode = engine->compiler(buffer);
+                    engine->runner(bytecode);
+                }
+                catch (const std::exception& e)
+                {
+                    std::printf("\n\n\tOXY ERRORED : %s\n\n", e.what());
+                }
             }
         }
 
